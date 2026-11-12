@@ -1,0 +1,61 @@
+:root {
+    --bs-primary: #0d6efd;
+    --main-color: #0d6efd;
+    --accent-color: #b00020;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #212529;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Шапка сайта */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Hero-секция с твоим фоном (background.jpg) */
+.hero-section {
+    padding: 80px 20px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+/* Карточки товаров */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+/* Футер */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+    margin-top: auto;
+}

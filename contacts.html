@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты интернет-магазина на Bootstrap 5 (КР №2).">
+    <title>Контакты — Интернет-магазин (КР №2)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="sticky-top bg-white border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light container py-3">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">ShopProject</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html?id=1">Товар</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-semibold" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+            </ol>
+        </nav>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="h2 fw-bold">Контакты</h1>
+                <p class="text-muted">Свяжитесь с нами любым удобным способом</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h2 class="h5 fw-bold mb-3">Наши контакты</h2>
+                    <ul class="list-unstyled text-muted small d-flex flex-column gap-2 mb-0">
+                        <li><strong>Телефон:</strong> <a href="tel:+79000000000" class="text-decoration-none">+7 (900)
+                                000-00-00</a></li>
+                        <li><strong>E-mail:</strong> <a href="mailto:info@example.com"
+                                class="text-decoration-none">info@example.com</a></li>
+                        <li><strong>Адрес:</strong> г. Москва, учебный корпус</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-4 h-100">
+                    <h2 class="h5 fw-bold mb-3">Быстрая заявка</h2>
+                    <p class="text-muted small mb-3">Хотите уточнить детали заказа? Перейдите к форме обратной связи.
+                    </p>
+                    <a href="order.html" class="btn btn-primary btn-sm align-self-start">Перейти к заявке</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 text-center text-muted">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Учебный проект. Все права защищены.</p>
+            <p class="mb-0 small">Дисциплина: Фронтенд и бэкенд разработка (КР №2)</p>
+        </div>
+    </footer>
+
+    <a href="#" class="to-top btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle shadow"
+        style="width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; z-index: 1000;"
+        aria-label="Наверх">↑</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

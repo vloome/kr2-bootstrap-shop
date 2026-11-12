@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Карточка товара на Bootstrap 5 (КР №2).">
+    <title>Карточка товара — Интернет-магазин (КР №2)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="sticky-top bg-white border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light container py-3">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">ShopProject</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-semibold" href="product.html?id=1">Товар</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+                <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-title">Беспроводные наушники</li>
+            </ol>
+        </nav>
+
+        <div class="card p-4 mb-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-5 text-center bg-light p-4 rounded border">
+                    <img id="product-img" src="images/product-1.jpg" class="img-fluid" style="max-height: 320px;"
+                        alt="Беспроводные наушники">
+                </div>
+                <div class="col-md-7">
+                    <span id="product-badge" class="badge bg-danger mb-2">Хит продаж</span>
+                    <h1 id="product-title" class="h2 fw-bold mb-3">Беспроводные наушники</h1>
+                    <p id="product-desc" class="text-muted mb-4">Наушники с зарядным кейсом и активным шумоподавлением.
+                    </p>
+                    <p id="product-price" class="h3 fw-bold text-primary mb-4">2 000 ₽</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a id="product-order-link" href="order.html?product=1" class="btn btn-primary btn-lg">Оформить
+                            заявку</a>
+                        <a href="catalog.html" class="btn btn-outline-secondary btn-lg">В каталог</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mb-5">
+            <h2 class="h4 fw-bold mb-3">Технические характеристики</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Параметр</th>
+                            <th scope="col">Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-specs">
+                        <tr>
+                            <td>Тип подключения</td>
+                            <td>Беспроводное (Bluetooth)</td>
+                        </tr>
+                        <tr>
+                            <td>Шумоподавление</td>
+                            <td>Активное (ANC)</td>
+                        </tr>
+                        <tr>
+                            <td>Комплектация</td>
+                            <td>Наушники, кейс, кабель USB-C</td>
+                        </tr>
+                        <tr>
+                            <td>Наличие</td>
+                            <td>В наличии</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center text-muted">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Учебный проект. Все права защищены.</p>
+            <p class="mb-0 small">Дисциплина: Фронтенд и бэкенд разработка (КР №2)</p>
+        </div>
+    </footer>
+
+    <a href="#" class="to-top btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle shadow"
+        style="width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; z-index: 1000;"
+        aria-label="Наверх">↑</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const products = {
+            "1": {
+                title: "Беспроводные наушники",
+                badge: "Хит продаж",
+                badgeClass: "badge bg-danger mb-2",
+                image: "images/product-1.jpg",
+                desc: "Наушники с зарядным кейсом и активным шумоподавлением.",
+                price: "2 000 ₽",
+                specs: [
+                    ["Тип подключения", "Беспроводное (Bluetooth)"],
+                    ["Шумоподавление", "Активное (ANC)"],
+                    ["Комплектация", "Наушники, кейс, кабель USB-C"],
+                    ["Наличие", "В наличии"]
+                ]
+            },
+            "2": {
+                title: "Щипцы для завивки ресниц",
+                badge: "Новинка",
+                badgeClass: "badge bg-success mb-2",
+                image: "images/product-2.jpg",
+                desc: "Компактный инструмент для быстрой завивки ресниц.",
+                price: "1 000 ₽",
+                specs: [
+                    ["Материал корпуса", "Металл / пластик"],
+                    ["Насадка", "Силиконовая подушечка"],
+                    ["Длина", "10.5 см"],
+                    ["Наличие", "В наличии"]
+                ]
+            },
+            "3": {
+                title: "Набор для электромонтажа",
+                badge: "Скидка",
+                badgeClass: "badge bg-warning text-dark mb-2",
+                image: "images/product-3.jpg",
+                desc: "Автоматические выключатели, кабель, розетка и счётчик.",
+                price: "1 500 ₽",
+                specs: [
+                    ["Состав набора", "Автоматы, кабель, розетка, счётчик, лампа"],
+                    ["Номинальное напряжение", "220–230 В"],
+                    ["Назначение", "Монтаж и тестирование электропроводки"],
+                    ["Наличие", "В наличии"]
+                ]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id") || "1";
+        const item = products[id] || products["1"];
+
+        document.title = item.title + " — Интернет-магазин (КР №2)";
+        document.getElementById("breadcrumb-title").textContent = item.title;
+        document.getElementById("product-title").textContent = item.title;
+        document.getElementById("product-badge").textContent = item.badge;
+        document.getElementById("product-badge").className = item.badgeClass;
+        document.getElementById("product-img").src = item.image;
+        document.getElementById("product-img").alt = item.title;
+        document.getElementById("product-desc").textContent = item.desc;
+        document.getElementById("product-price").textContent = item.price;
+        document.getElementById("product-order-link").href = "order.html?product=" + id;
+
+        const tbody = document.getElementById("product-specs");
+        tbody.innerHTML = item.specs.map(row => `<tr><td>${row[0]}</td><td>${row[1]}</td></tr>`).join("");
+    </script>
+</body>
+
+</html>
